@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 export default function ruotes() {
     return (
         <NavigationContainer>
-            <Tab.Navigator screenOptions={{ tabBarLabel: () => null}}>
+            <Tab.Navigator screenOptions={{ title: ' '}}>
                 <Tab.Screen 
                 name="Home" 
                 component={Home} 
