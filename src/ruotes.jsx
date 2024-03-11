@@ -11,13 +11,38 @@ const Tab = createBottomTabNavigator();
 export default function ruotes() {
     return (
         <NavigationContainer>
-            <Tab.Navigator>
-                <Tab.Screen name="Home" component={Home} />
-                <Tab.Screen name="Message" component={Message} />
-                <Tab.Screen name="Like" component={Like} />
-                <Tab.Screen name="Search" component={Search} options={
-                    () => <AntDesign name="home" size={24} color="black" />
-                } />
+            <Tab.Navigator screenOptions={{ tabBarLabel: () => null}}>
+                <Tab.Screen 
+                name="Home" 
+                component={Home} 
+                options={{
+                    tabBarIcon: ({size, color}) => 
+                    <AntDesign name="home" size={size} color={color} />
+                    }}
+                />
+                <Tab.Screen 
+                name="Message" 
+                component={Message} 
+                options={{
+                    tabBarIcon: ({size, color}) => 
+                    <AntDesign name="message1" size={size} color={color} />
+                    }}
+                />
+                <Tab.Screen 
+                name="Like" 
+                component={Like} 
+                options={{
+                    tabBarIcon: ({size, color}) => 
+                    <AntDesign name="hearto" size={size} color={color} />
+                    }}
+                />
+                <Tab.Screen 
+                name="Search" 
+                component={Search} 
+                options={{
+                    tabBarIcon: ({size, color}) => 
+                    <AntDesign name="home" size={size} color={color} />
+                    }} />
             </Tab.Navigator>
         </NavigationContainer>
     )
